@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+	int a,n,i,j,c=0,k;
+	scanf("%d",&n);
+	a=(n-2)*(n-2);
+	int max;
+	
+	int dia[a];
+	int arr[n][n];
+	int start=0;
+	int end=n-1;
+	
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%d",&arr[i][j]);
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			if(i!=start&&i!=end&&j!=start&&j!=end)
+			{
+			
+			
+			   	dia[c]=arr[i+1][j]+arr[i-1][j]+arr[i][j+1]+arr[i][j-1];
+			   	c++;
+			
+			}
+		}
+	}
+	max=dia[0];
+	for(k=0;k<a;k++)
+	{
+		if(max<dia[k])
+		{
+			max=dia[k];
+		}
+	}
+	printf("%d",max);
+}
