@@ -1,39 +1,39 @@
 #include<stdio.h>
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    int arr[100],i;
-    int a=0,b=1,c;
-    int diff1,diff2;
-    for(i=0;i<100;i++)
+    int a;
+    scanf("%d",&a);
+    int arr[100],i,j;
+    int fa=0,fb=1,temp;
+    for (i=0; i<100; i++)
     {
-        arr[i]=a;
-        c=a+b;
-        a=b;
-        b=c;
+        arr[i]=fa;
+        temp=fa+fb;
+        fa=fb;
+        fb=temp;
     }
-    for(i=0;i<100;i++)
+    int dl=0,df=0,fib=0;
+    for (i=0; i<100; i++)
     {
-        if(n<arr[i])
+        if (arr[i]>a)
         {
-            diff1=n-arr[i-1];
-            diff2=arr[i]-n;
-            if(diff1>diff2)
-            {
-                printf("%d",arr[i]);
-                break;
-            }
-            else if(diff1<diff2)
-            {
-                printf("%d",arr[i-1]);
-                break;
-            }
-            else if(diff1==diff2)
+            dl=arr[i]-a;
+            df=a-arr[i-1];
+            if (dl==df)
             {
                 printf("%d %d",arr[i-1],arr[i]);
-                break;
             }
+            else if (dl>df)
+            {
+                fib=i-1;
+                printf("%d",arr[fib]);
+            }
+            else
+            {
+                fib=i;
+                printf("%d",arr[fib]);
+            }
+            break;
         }
     }
     return 0;
