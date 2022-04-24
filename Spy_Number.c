@@ -1,22 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,sum=0,multi=1,r,o;
+    int n;
     scanf("%d",&n);
+    int sum=0,mul=1,r;
     while(n>0)
     {
         r=n%10;
+        sum+=r;
+        mul*=r;
         n=n/10;
-        sum=sum+r;
-        multi=multi*r;
     }
-     if(multi==sum)
-     {
-         printf("Spy Number");
-     }
-     else
-     {
-         printf("Not Spy Number");
-     }
-    return 0;
+    if(sum==mul)
+    {
+        printf("Spy Number");
+    }
+    else
+    {
+        printf("Not Spy Number");
+    }
 }
