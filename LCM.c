@@ -1,20 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int temp,a,b,i;
+    int a,b;
     scanf("%d%d",&a,&b);
-    if(a>b)
+    int lcm=1;
+    while (1)
     {
-        temp=a;
-        a=b;
-        b=temp;
-    }
-    for(i=a;;i++)
-    {
-        if(i%a==0&&i%b==0)
+        if (lcm%a==0 && lcm%b==0)
         {
-            printf("%d",i);
             break;
         }
+        else
+        {
+            lcm++;
+        }
     }
+    printf("%d",lcm);
+    return 0;
 }
