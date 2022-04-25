@@ -1,20 +1,32 @@
 #include<stdio.h>
 int main()
 {
-    int CO=0,n,a=0,b=1,c=0;
-    scanf("%d",&n);
-    while(c<=n)
+    int arr[100];
+    int a=0,b=1,c;
+    for(int i=0;i<100;i++)
     {
+        arr[i]=a;
         c=a+b;
         a=b;
         b=c;
-        if(c==n)
+    }
+    int n;
+    scanf("%d",&n);
+    int co=0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==n)
         {
-        printf("True");
-        CO++;
+            co=1;
+            break;
         }
     }
-    if(CO==0)
-    printf("False");
-    return 0;
+    if(co==1)
+    {
+     printf("True");   
+    }
+    else
+    {
+        printf("False");
+    }
 }
