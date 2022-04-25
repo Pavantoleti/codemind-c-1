@@ -1,8 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int arr[100];
-    int a=0,b=1,c;
+    int arr[100],a=0,b=1,c;
     for(int i=0;i<100;i++)
     {
         arr[i]=a;
@@ -23,7 +22,7 @@ int main()
     }
     if(co==1)
     {
-     printf("True");   
+        printf("True");
     }
     else
     {
