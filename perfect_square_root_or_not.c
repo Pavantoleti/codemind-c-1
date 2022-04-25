@@ -1,20 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    float n,i,a,c=0;
-    scanf("%f",&n);
-    for(i=1;i<n;i++)
+    int c=0;
+    float a;
+    scanf("%f",&a);
+    for(int i=0;i<a/2;i++)
     {
-        a=n/i;
-        if(a==i)
+        if(i*i==a)
         {
-           printf("True");
-           c++;
+            c++;
+            break;
         }
     }
-    if(c==0)
+    if(c==1)
+    {
+        printf("True");
+    }
+    else
     {
         printf("False");
     }
-    return 0;
 }
