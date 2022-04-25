@@ -1,12 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    long int no,i,c=0;
-    scanf("%d",&no);
-    for(i=1;i<=no;i++)
+    int n;
+    scanf("%d",&n);
+    int c=0;
+    for(int i=1;i<=n;i++)
     {
-        if(no%i==0)
-        c++;
+        if(n%i==0)
+        {
+            c++;
+        }
     }
     if(c==2)
     {
