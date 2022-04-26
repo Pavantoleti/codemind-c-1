@@ -1,29 +1,27 @@
 #include<stdio.h>
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    int a[n],i,j,c=0;
-    for(i=0;i<n;i++)
+    int a;
+    scanf("%d",&a);
+    int arr[a],i;
+    for (i=0; i<a; i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    for(i=0;i<n;i++)
+    int flag=0;
+    for (i=0; i<a; i++)
     {
-        if(a[i]%2==0)
+        if (arr[i]%2==0 && i%2==0)
         {
-            if(i%2==0)
-            {
-                c=0;
-            }
-            else
-            {
-                c=1;
-                break;
-            }
+            flag=1;
+        }
+        else if (arr[i]%2==0 && i%2!=0)
+        {
+            flag=0;
+            break;
         }
     }
-    if(c!=1)
+    if (flag==1)
     {
         printf("True");
     }
@@ -31,7 +29,5 @@ int main()
     {
         printf("False");
     }
+    return 0;
 }
- 
-
- 
