@@ -8,35 +8,35 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    double avg,sum=0;
-    int c=0,count=0;
+    int sum=0,c=0;
+    double avg;
     for (i=0; i<a; i++)
     {
-        c=1;
+        int count=1;
         for (j=0; j<a; j++)
         {
-            if (i!=j && arr[i]!=0)
+            if (i!=j)
             {
-                if (arr[i]==arr[j])
+                if (arr[i]==arr[j] && arr[i]!=-1)
                 {
-                    c++;
-                    arr[j]=0;
+                    count++;
+                    arr[j]=-1;
                 }
             }
         }
-        if (c==arr[i])
+        if (count==arr[i])
         {
             sum+=arr[i];
-            count++;
+            c++;
         }
     }
-    if (count==0)
+    if (c==0)
     {
-        printf("%d",-1);
+        printf("-1");
     }
     else
     {
-        avg=sum/(count*1.0);
+        avg=sum*1.0/c;
         printf("%.2lf",avg);
     }
     return 0;
