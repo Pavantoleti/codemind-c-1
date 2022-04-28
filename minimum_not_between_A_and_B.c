@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    int arr[n],i;
-    for (i=0; i<n; i++)
+    int a;
+    scanf("%d",&a);
+    int arr[a],i;
+    for (i=0; i<a; i++)
     {
         scanf("%d",&arr[i]);
     }
-    int a,b,min=10000,c=0;
-    scanf("%d%d",&a,&b);
-    for (i=0; i<n; i++)
+    int x,y,min=10000,c=0;
+    scanf("%d%d",&x,&y);
+    for (i=0; i<a; i++)
     {
-        if (arr[i]<a|| arr[i]>b)
+        if (arr[i]<x || arr[i]>y)
         {
             if (min>arr[i])
             {
